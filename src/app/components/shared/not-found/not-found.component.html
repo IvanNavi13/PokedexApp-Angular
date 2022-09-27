@@ -1,0 +1,48 @@
+<p>not-found works!</p>
+
+
+<ul>
+
+    <li routerLink="/authLazy/login">
+        Ir a Login
+    </li>
+    <li routerLink="/authLazy/enroll">
+        Ir a Registro
+    </li>
+            <!--  -->
+    <li>
+        <a routerLink="/pokedex">Pokedex</a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/add">Agregar</a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/edit/1">Editar</a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/find">Buscar</a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/list">Lista</a>
+    </li>
+    <li>
+        <a routerLink="/pokedex/pokemon/2">Pokemon</a>
+    </li>
+
+</ul>
+
+    <br>
+
+    <button (click)="login()">Login</button>
+    <br><br>
+    <button (click)="logout()">Logout</button>
+
+    <p>{{ showSession() }}</p>
+    
+    
+
+
+<!--routerLink: Rediregir la pagina
+    lazy: de acuerdo a la demanda -->
+
+
