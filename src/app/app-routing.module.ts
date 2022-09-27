@@ -47,7 +47,7 @@ const routes: Routes = [
   },
 
   {
-    path: '',
+    path: '',       //Para evitar bucles, ya que toda url empieza con cadena vacia
     component: NotFoundComponent,
     pathMatch: 'full'
   },
