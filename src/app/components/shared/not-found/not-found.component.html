@@ -9,7 +9,7 @@
     <li routerLink="/authLazy/enroll">
         Ir a Registro
     </li>
-            <!--  -->
+    <!--  -->
     <li>
         <a routerLink="/pokedex">Pokedex</a>
     </li>
@@ -31,18 +31,48 @@
 
 </ul>
 
+<br>
+
+<button (click)="login()">Login</button>
+<br><br>
+<button (click)="logout()">Logout</button>
+
+<p>{{ showSession() }}</p>
+
+<br>
+<hr>
+<br>
+<div class="form">
+    <div class="card-body">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username: </label>
+                <input type="text" formControlName="username" class="form-control" autocomplete="new_username"
+                    placeholder="" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" formControlName="password" class="form-control" autocomplete="new_password"
+                    placeholder="" />
+            </div>
+            <button class="btn btn-primary" [disabled]="!loginForm.valid">
+                Login
+            </button>
+            <div *ngIf="error" style="color:red;">
+                {{ error }}
+            </div>
+        </form>
+    </div>
+
     <br>
 
-    <button (click)="login()">Login</button>
-    <br><br>
-    <button (click)="logout()">Logout</button>
+    <a routerLink="../..">
+        Regresar
+    </a>
+</div>
 
-    <p>{{ showSession() }}</p>
-    
-    
+<p>{{ showSession()}}</p>
 
 
 <!--routerLink: Rediregir la pagina
     lazy: de acuerdo a la demanda -->
-
-
